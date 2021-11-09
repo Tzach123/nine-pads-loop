@@ -1,0 +1,56 @@
+.pads-board {
+  position: relative;
+  width: 600px;
+  height: 700px;
+  border: 1px solid #3b3b3b;
+  margin: 16px 0;
+  background-color: #3b3b3b;
+  color: aliceblue;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.pads-board-control {
+  position: relative;
+  width: 80%;
+  height: 15%;
+  margin: auto;
+}
+
+.pads-board-body {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  transform: translateX(10%);
+  bottom: 8px;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 30% 30% 30%;
+  column-gap: 5%;
+  row-gap: 5%;
+}
+
+@media (max-width: 700px) {
+  .pads-board {
+    width: 400px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 450px) {
+  .pads-board {
+    width: 150px;
+    height: auto;
+  }
+
+  .pads-board-body {
+    width: 100%;
+    position: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transform: none;
+    padding: 8px 0;
+  }
+}
